@@ -7,6 +7,11 @@ class CAPONE < Sinatra::Base
   end
 
   post '/registration' do
+    p sal = params[:Salutation]
+    p fir = params[:First_Name]
+    p las = params[:Last_Name]
+    p cou = params[:Previous_Country]
+    p gen = params[:Gender]
     redirect '/confirmation'
   end
 

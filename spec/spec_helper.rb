@@ -3,8 +3,11 @@ require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 
+require 'pg'
+
 require 'test_helper_methods/fill_in_form.rb'
 require './app/app.rb'
+require './app/models/database.rb'
 
 Capybara.app = CAPONE
 
