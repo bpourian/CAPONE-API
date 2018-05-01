@@ -2,10 +2,10 @@ require 'sinatra/base'
 
 class CAPONE < Sinatra::Base
 
-  run! if app_file == $0
+
   #
   get '/' do
-    "Welcome to CapitalOne"
+    erb :index
   end
   #
   # post '/' do
@@ -16,4 +16,5 @@ class CAPONE < Sinatra::Base
   #
   # end
 
+  run! if app_file == $0
 end
