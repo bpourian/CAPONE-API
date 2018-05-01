@@ -12,6 +12,11 @@ feature 'Confirmation Page Features' do
       expect(page).to have_content("Congratulations, you are now a citizen of Capital Oneder")
     end
 
+    scenario "Page to confirm citizenship id text" do
+      visit '/confirmation'
+      expect(page).to have_content("Your unique citizenship id:")
+    end
+
     scenario "Page to display unique citizenship number" do
       visit '/confirmation'
       expect(page).to have_selector("//output", :id =>"citizenship_id")
