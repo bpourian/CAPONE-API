@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require_relative 'models/citizen.rb'
+require_relative 'models/database.rb'
 
 class CAPONE < Sinatra::Base
 
@@ -7,11 +9,10 @@ class CAPONE < Sinatra::Base
   end
 
   post '/registration' do
-    p sal = params[:Salutation]
-    p fir = params[:First_Name]
-    p las = params[:Last_Name]
-    p cou = params[:Previous_Country]
-    p gen = params[:Gender]
+    json = Citizen.to_json(params[:Salutation], params[:First_Name],
+      params[:Last_Name], params[:Previous_Country], params[:Gender])
+    Citizen.store_citizen_details(json)
+
     redirect '/confirmation'
   end
 

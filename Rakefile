@@ -17,9 +17,9 @@ task :create_table_citizens do
     con = PG.connect :dbname => database
 
     con.exec "DROP TABLE IF EXISTS Citizens"
-    con.exec "CREATE TABLE Citizens(Id INTEGER PRIMARY KEY,
-        salutation VARCHAR(20), first_name VARCHAR(20), last_name VARCHAR(20),
-         previous_country VARCHAR(20), gender VARCHAR(20));"
+    con.exec "CREATE TABLE Citizens(id SERIAL PRIMARY KEY,
+        salutation VARCHAR(60), first_name VARCHAR(60), last_name VARCHAR(60),
+        previous_country VARCHAR(60), gender VARCHAR(60));"
     con.close if con
   end
 end
@@ -27,9 +27,9 @@ end
 task :create_table_citizens_test do
   con = PG.connect :dbname => 'capital_oneder_test'
   con.exec "DROP TABLE IF EXISTS Citizens"
-  con.exec "CREATE TABLE Citizens(Id INTEGER PRIMARY KEY,
-      salutation VARCHAR(20), first_name VARCHAR(20), last_name VARCHAR(20),
-       previous_country VARCHAR(20), gender VARCHAR(20));"
+  con.exec "CREATE TABLE Citizens(id SERIAL PRIMARY KEY,
+      salutation VARCHAR(60), first_name VARCHAR(60), last_name VARCHAR(60),
+       previous_country VARCHAR(60), gender VARCHAR(60));"
   con.close if con
 end
 

@@ -1,3 +1,5 @@
+require 'pg'
+
 class Database
   attr_reader  :connection
 
