@@ -6,8 +6,6 @@ class Citizen
     position = 1
 
     citizen_detail.each do |item|
-      p item
-      p item['salutation']
       con.exec("INSERT INTO Citizens(salutation, first_name, last_name, previous_country, gender)
       VALUES('#{item['salutation']}', '#{item['first_name']}', '#{item['last_name']}', '#{item['previous_country']}', '#{item['gender']}')")
 
