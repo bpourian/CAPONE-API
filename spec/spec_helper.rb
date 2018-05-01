@@ -8,6 +8,7 @@ require 'pg'
 require 'test_helper_methods/fill_in_form.rb'
 require './app/app.rb'
 require './app/models/database.rb'
+require './app/models/citizen.rb'
 
 Capybara.app = CAPONE
 

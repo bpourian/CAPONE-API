@@ -18,8 +18,8 @@ task :create_table_citizens do
 
     con.exec "DROP TABLE IF EXISTS Snacks"
     con.exec "CREATE TABLE Citizens(Id INTEGER PRIMARY KEY,
-        Salutation VARCHAR(20), First_Name VARCHAR(20), Last_Name VARCHAR(20),
-         Previous_Country VARCHAR(20), Gender VARCHAR(20));"
+        salutation VARCHAR(20), first_name VARCHAR(20), last_name VARCHAR(20),
+         previous_country VARCHAR(20), gender VARCHAR(20));"
     con.close if con
   end
 end
