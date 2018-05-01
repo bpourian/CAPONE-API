@@ -7,6 +7,13 @@ feature 'Home Page Features' do
     end
   end
 
+  context "Home Page Text" do
+    scenario "Page title to be displayed" do
+      visit '/'
+      expect(page).to have_content("Capital Oneder application page")
+    end
+  end
+
   context "Salutation input on homepage" do
     scenario "Page to have input tag 'Salutation' present" do
       visit '/'
