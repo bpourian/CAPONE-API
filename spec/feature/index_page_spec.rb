@@ -80,4 +80,11 @@ feature 'Home Page Features' do
       expect(page).to have_selector(:link_or_button, 'Submit')
     end
   end
+
+  context "Fill in form and submit" do
+    scenario "Visit 'Homepage' and fill in form" do
+      visit_index_and_fill_in_form
+      expect(page).to have_content("Congratulations, you are now a citizen of Capital Oneder")
+    end
+  end
 end
