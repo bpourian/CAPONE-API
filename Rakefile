@@ -16,12 +16,21 @@ task :create_table_citizens do
   ['capital_oneder_test', 'capital_oneder_dev'].each do |database|
     con = PG.connect :dbname => database
 
-    con.exec "DROP TABLE IF EXISTS Snacks"
+    con.exec "DROP TABLE IF EXISTS Citizens"
     con.exec "CREATE TABLE Citizens(Id INTEGER PRIMARY KEY,
         salutation VARCHAR(20), first_name VARCHAR(20), last_name VARCHAR(20),
          previous_country VARCHAR(20), gender VARCHAR(20));"
     con.close if con
   end
+end
+
+task :create_table_citizens_test do
+  con = PG.connect :dbname => 'capital_oneder_test'
+  con.exec "DROP TABLE IF EXISTS Citizens"
+  con.exec "CREATE TABLE Citizens(Id INTEGER PRIMARY KEY,
+      salutation VARCHAR(20), first_name VARCHAR(20), last_name VARCHAR(20),
+       previous_country VARCHAR(20), gender VARCHAR(20));"
+  con.close if con
 end
 
 task :setup do

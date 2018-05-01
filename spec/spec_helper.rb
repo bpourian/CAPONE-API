@@ -1,16 +1,27 @@
+ENV['ENVIRONMENT'] = 'test'
+
 require 'capybara'
 require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 
 require 'pg'
+require 'rake'
 
 require 'test_helper_methods/fill_in_form.rb'
 require './app/app.rb'
 require './app/models/database.rb'
 require './app/models/citizen.rb'
 
+Rake.application.load_rakefile
+
 Capybara.app = CAPONE
+
+RSpec.configure do |config|
+  config.before(:each) do
+    Rake::Task['create_table_citizens_test'].execute
+  end
+end
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console])
