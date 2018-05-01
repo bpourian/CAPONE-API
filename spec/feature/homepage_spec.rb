@@ -1,4 +1,4 @@
-feature 'Home Page' do
+feature 'Home Page Features' do
 
   context "Home Page Connection" do
     scenario "Homepage status code to be '200'" do
@@ -64,6 +64,13 @@ feature 'Home Page' do
     scenario "Display 'Gender' box on page" do
       visit '/'
       expect(page).to have_field("Gender")
+    end
+  end
+
+  context "Submit button on homepage" do
+    scenario "Page to have 'Submit' button" do
+      visit '/'
+      expect(page).to have_selector(:link_or_button, 'Submit')
     end
   end
 end
