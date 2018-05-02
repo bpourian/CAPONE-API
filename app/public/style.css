@@ -1,0 +1,24 @@
+html{
+  background-color: #8EA6B4 !important;
+
+}
+
+div.main-body{
+  text-align: center;
+  margin: 100px auto;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+input[type=text]{
+  width: 10%;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+input[type=submit] {
+  width: 10%;
+  height: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+}

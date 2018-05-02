@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <title>Confirmation - Capital Oneder</title>
   </head>
   <body>
-    <h2>Congratulations, you are now a citizen of Capital Oneder</h2>
+    <div class="main-body">
 
-    <h3>Your unique citizenship id:</h3>
-    <output name="citizenship_id" id="citizenship_id" ><%=@citizen_id%></output>
+      <h2>Congratulations, you are now a citizen of Capital Oneder!</h2>
+      <h2>Your unique citizenship id:</h2>
+      <h2>
+        <output name="citizenship_id" id="citizenship_id" ><%=@citizen_id%></output>
+
+      </h2>
+
+    </div>
   </body>
 </html>
