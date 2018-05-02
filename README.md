@@ -37,5 +37,6 @@ GET/POST requests via curl
 
 ```
 $ curl -i -X POST -H "Content-Type: application/json" -d'{"salutation":"Mr",
-"first_name":"Joe","last_name":"Blogs","previous_country":"UK","gender":"Male"}' http://localhost:9292/api/v1/citizens
+"first_name":"Joe","last_name":"Blogs","previous_country":"UK",
+"gender":"Male"}' http://localhost:9292/api/v1/citizens
 ```
