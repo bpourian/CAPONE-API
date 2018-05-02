@@ -1,8 +1,11 @@
+require 'sinatra'
 require 'sinatra/base'
+require "sinatra/namespace"
 require_relative 'models/citizen.rb'
 require_relative 'models/database.rb'
 
 class CAPONE < Sinatra::Base
+  register Sinatra::Namespace
   enable :sessions
 
   get '/' do
@@ -25,6 +28,16 @@ class CAPONE < Sinatra::Base
   get '/confirmation' do
     @citizen_id = session[:citizen_id]
     erb :confirmation
+  end
+
+  namespace '/api/v1' do
+    before do
+      content_type 'application/json'
+    end
+
+    get '/citizens' do
+      Citizen.get_citizens_in_json
+    end
   end
 
   run! if app_file == $0

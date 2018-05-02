@@ -2,8 +2,8 @@ require_relative 'database'
 require 'json'
 
 class Citizen
-  def self.store_citizen_details(citizen_detail, database_name = "capital_oneder_dev")
-    con = Database.connect(database_name)
+  def self.store_citizen_details(citizen_detail)
+    con = Database.connect
     position = 1
 
     citizen_detail.each do |item|
@@ -28,6 +28,17 @@ class Citizen
       "citizen_id" => citizen_id
     }
   ]
+  end
+
+  def self.get_citizens_in_json
+    con = Database.connect
+    result = con.query("SELECT * FROM citizens;")
+
+    citizen = []
+    result.each do |row|
+      citizen << row
+    end
+    citizen.to_json
   end
 
   def self.random_id_generator

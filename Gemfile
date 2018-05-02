@@ -6,6 +6,8 @@ gem 'capybara'
 gem 'pg'
 gem 'rake'
 gem 'sinatra'
+gem 'sinatra-namespace'
+gem 'sinatra-contrib'
 gem 'thin'
 
 group :test do

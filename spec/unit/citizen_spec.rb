@@ -9,8 +9,8 @@ describe Citizen do
 
   context "#store_citizen_details" do
     it "Should change database count by one" do
-      Citizen.store_citizen_details(mock_citizen, 'capital_oneder_test')
-      con = Database.connect('capital_oneder_test')
+      Citizen.store_citizen_details(mock_citizen)
+      con = Database.connect
       result = con.query("SELECT * FROM Citizens;")
 
       expect(result.num_tuples).to eq(1)
@@ -29,6 +29,15 @@ describe Citizen do
     it "Should return json format" do
       expect(Citizen.convert_to_hash("Mr", "Benjamin", "Pourian", "France", "Male",
         "Pourian1234")).to eq(mock_citizen_json)
+    end
+  end
+
+  context "#get_citizens_in_json" do
+    it "Should get data from db and return json" do
+      Citizen.store_citizen_details(mock_citizen)
+
+      expect(Citizen.get_citizens_in_json).to eq(json_response)
+
     end
   end
 end
