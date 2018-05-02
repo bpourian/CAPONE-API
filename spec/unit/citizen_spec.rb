@@ -1,11 +1,15 @@
 describe Citizen do
 
-  let(:citizen)             { described_class.new }
-  let(:mock_citizen)        { [{ "salutation" => "Mr", "first_name" => "Benjamin",
+  let(:citizen)                   { described_class.new }
+
+  let(:mock_citizen)              { [{ "salutation" => "Mr", "first_name" => "Benjamin",
     "last_name" => "Pourian", "previous_country" => "United Kingdom", "gender" => "Male", "citizen_id" => "Pourian1234"}] }
 
-  let(:mock_citizen_json)    { [{"salutation"=>"Mr", "first_name"=>"Benjamin",
+  let(:mock_citizen_json)         { [{"salutation"=>"Mr", "first_name"=>"Benjamin",
     "last_name"=>"Pourian", "previous_country"=>"France", "gender"=>"Male", "citizen_id"=>"Pourian1234"}] }
+
+  let(:mock_single_citizen_api)   { {"salutation" => "Mr","first_name" =>
+    "Ben","last_name" => "Pourian","previous_country" => "UK","gender" => "Male"} }
 
   context "#store_citizen_details" do
     it "Should change database count by one" do
@@ -37,7 +41,17 @@ describe Citizen do
       Citizen.store_citizen_details(mock_citizen)
 
       expect(Citizen.get_citizens_in_json).to eq(json_response)
+    end
+  end
 
+  context "#input_from_api" do
+    it "Should store api put request in db" do
+      Citizen.input_from_api(mock_single_citizen_api)
+      con = Database.connect
+      result = con.query("SELECT * FROM Citizens;")
+
+      expect(result.num_tuples).to eq(1)
+      con.close if con
     end
   end
 end

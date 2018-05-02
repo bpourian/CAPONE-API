@@ -4,7 +4,9 @@ require 'capybara'
 require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
+require 'pg'
 require 'rake'
+require './app/app.rb'
 
 Rake.application.load_rakefile
 
@@ -13,11 +15,8 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console])
 SimpleCov.start
 
-require 'pg'
-
 require 'test_helper_methods/fill_in_form.rb'
 require 'test_helper_methods/json_mock_response.rb'
-require './app/app.rb'
 require './app/models/database.rb'
 require './app/models/citizen.rb'
 
@@ -29,8 +28,6 @@ RSpec.configure do |config|
     Rake::Task['create_table_citizens_test'].execute
   end
 end
-
-
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/base'
 require "sinatra/namespace"
+require "json"
 require_relative 'models/citizen.rb'
 require_relative 'models/database.rb'
 
@@ -17,10 +18,10 @@ class CAPONE < Sinatra::Base
     citizen_id = params[:Last_Name] + Citizen.random_id_generator
     session[:citizen_id] = citizen_id
 
-    json = Citizen.convert_to_hash(params[:Salutation], params[:First_Name],
+    citizen = Citizen.convert_to_hash(params[:Salutation], params[:First_Name],
       params[:Last_Name], params[:Previous_Country], params[:Gender], citizen_id)
 
-    Citizen.store_citizen_details(json)
+    Citizen.store_citizen_details(citizen)
 
     redirect '/confirmation'
   end
@@ -37,6 +38,17 @@ class CAPONE < Sinatra::Base
 
     get '/citizens' do
       Citizen.get_citizens_in_json
+    end
+
+    post '/citizens' do
+      begin
+        response = JSON.parse(request.body.read)
+        Citizen.input_from_api(response)
+        halt 200, { status:'200', message:'Citizen Updated' }.to_json
+      rescue
+        halt 400, { message:'Invalid JSON' }.to_json
+      end
+
     end
   end
 
