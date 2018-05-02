@@ -6,7 +6,7 @@ I chose to build this app in Ruby and Sinatra Framework. I also used PostgreSQL 
 
 The tech-test specifications hadn't indicated which stack to use for this build. I completed this task with the stack that had most recent exposure to. I did this so I could complete the task and demonstrate my understanding of the full-stack.
 
-The website can be accessed through local-host and you have the option to either interact with it using the UI or GET and PUT API requests in the form of a JSON. Further documentation below.
+The website can be accessed through local-host and you have the option to either interact with it using the UI or API GET and PUT requests via `curl` or `Postman`. Further documentation below.
 
 Specifications
 ------
@@ -31,3 +31,11 @@ make them a citizen.
 
 At a later point, it might be needed for the head of a family to be able to add in all the members
 of their family in one go.
+
+GET/POST requests via curl
+-----
+
+```
+$ curl -i -X POST -H "Content-Type: application/json" -d'{"salutation":"Mr",
+"first_name":"Joe","last_name":"Blogs","previous_country":"UK","gender":"Male"}' http://localhost:9292/api/v1/citizens
+```
