@@ -10,7 +10,7 @@ feature 'Home Page Features' do
   context "Home Page Text" do
     scenario "Page title to be displayed" do
       visit '/'
-      expect(page).to have_content("Capital Oneder citizenship page")
+      expect(page).to have_content("Capital Oneder citizenship application")
     end
   end
 
