@@ -1,4 +1,5 @@
 feature 'Confirmation Page Features' do
+
   context "Confirmation Page Connection" do
     scenario "Homepage status code to be '200'" do
       visit '/confirmation'

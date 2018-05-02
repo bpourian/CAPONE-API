@@ -5,6 +5,10 @@ require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::Console])
+SimpleCov.start
+
 require 'pg'
 require 'rake'
 
@@ -23,9 +27,7 @@ RSpec.configure do |config|
   end
 end
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-  SimpleCov::Formatter::Console])
-SimpleCov.start
+
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
