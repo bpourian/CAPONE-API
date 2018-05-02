@@ -1,5 +1,4 @@
 require 'pg'
-require 'rake'
 
 task :test_database_setup do
   con = PG.connect(dbname: 'capital_oneder_test')
@@ -35,7 +34,7 @@ task :create_table_citizens_test do
 end
 
 task :auto_migrate do
-  con = PG.connect(dbname: 'postgresql-reticulated-68763')
+  con = PG.connect(dbname: 'postgres://axgbnmwpkantca:cee439cc47ecac16c96d584140476111f236cf5c3823dbae59c7468fad9151c2@ec2-54-228-181-43.eu-west-1.compute.amazonaws.com:5432/d1d5ogor6eaos9')
   con.exec("TRUNCATE Citizens;")
 
   con.exec "DROP TABLE IF EXISTS Citizens"
