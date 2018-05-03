@@ -1,4 +1,4 @@
-ENV['ENVIRONMENT'] = 'test'
+ENV['RACK_ENV'] = 'capital_oneder_test'
 
 require 'capybara'
 require 'capybara/rspec'
