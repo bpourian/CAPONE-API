@@ -128,7 +128,7 @@ User Stories
 
 As a User
 So that I can register as a citizen of Capital-Onder
-I would like visit a website
+I would like to visit a webpage
 
 As a User
 So that I can give my information over on the website
@@ -144,15 +144,38 @@ I would like to receive a citizenship id number
 ----------MVP V3----------
 As a User
 So that I can view the applicants at a later time
-I would like to be able to store them
+I would like to be able to store their details
 ```
 
 ```
 ----------MVP V4----------
 As a User
 So that I can register multiple applicants
-I would like to be able to register them with ease
+I would like to be able to register them in one go
 ```
+
+Process
+------
+Initially when I read the specs for this task there was an element of confusion as to what exactly I had to build. The requirements were not specific and I wasn't able to find out more information. So, I set about researching online and trying to understand what is really meant by an `API`. I reached a conclusion that without additional information I will not be able to determine for certain what type of an `API` was required. In my research I came across this interesting [article](https://www.upwork.com/hiring/development/intro-to-apis-what-is-an-api/), which helped me to take a more decisive action in my design.
+
+So, I set about writing user stories, diagramming and jotting down ideas. I finally decided that I was going to build a webapp with its own API so that if requirements did change and there was a need for a more specific application I would have an `API` to interact with. This was the first time I had attempted to build something like this and I really welcomed the challenge. In my attempt to complete this challenge, I read several blogs and looked at a number of repositories as well as previous applications I had made.
+
+• I test drove my production and ensured that I kept an eye on the code analysis to ensure high test coverage.
+• I setup my environment and ensured I was making regular git/github commits with clear notes
+• I setup a rake file to help with database setup and cleaning after each test
+• PostgreSQL is what I used for local storage along with an app called PSequel to manually validate the input data on top of existing tests
+•
+
+Improvements
+----
+Given more time I would like to have completed the following;
+
+• Ensured my API was tested with the aid of a gem called [VCR](https://github.com/vcr/vcr) to record my API calls
+• Debug the Heroku deployment
+• Use of Flash in Sinatra to display database errors when inserting a duplicate name or other invalid data type
+
+Above are some of the improvements I would like to have made given more time.
+
 
 
 Test Specifications
