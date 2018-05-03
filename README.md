@@ -13,6 +13,8 @@ The website can be accessed through local-host and you have the option to either
 
 I have also setup Travis CI, to view that the build was successful simply click on the build logo at the top.
 
+See more on my approach <a href='#process'>below</a>.
+
 Heroku
 ----
 
@@ -23,11 +25,9 @@ I have hosted the application on `Heroku`, why not try it out by visiting:
 If you want to see the results in a `json` format visit the api link below:
 
 
-[http://localhost:9292/api/v1/citizens](http://localhost:9292/api/v1/citizens)
+[https://capital-oneder.herokuapp.com/api/v1/citizens](https://capital-oneder.herokuapp.com/api/v1/citizens)
 
 
-
-See more on my approach <a href='#process'>below</a>.
 
 Instructions
 -------
