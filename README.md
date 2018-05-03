@@ -1,5 +1,5 @@
 Capital-Oneder
------------
+=============
 Introduction
 ----
 I chose to build this app in Ruby and Sinatra Framework. I used PostgreSQL for storage along with a Ruby gem called `pg` to interact with the database within my code.
@@ -121,7 +121,7 @@ GET request:
 curl -i -H "Accept: application/json" -H "Content-Type: application/json"
 -X GET http://localhost:9292/api/v1/citizens
 ```
-Specifications
+Test Specifications
 ------
 In the establishment of the New World Order, CapitalOne has laid down plans for creating a
 nation, Capital Oneder, for anyone to be a part of. To become a citizen, people need to send in
@@ -135,7 +135,8 @@ the following info:
 When a person becomes a citizen, they are provided with a Capital Onederer unique
 identification tag.
 
-## Requirements
+Requirements:
+
 The president of Capital Onederer, Rich Faircountry, expects 100MM people apply for
 citizenship on the first day. We need an API to register the customers as they come in, without
 missing anyone out, hopefully. Every citizen should also receive the initial details needed to
