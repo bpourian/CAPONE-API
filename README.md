@@ -116,7 +116,7 @@ one name at the same time simply follow this data structure and add to it:
 "first_name":"Jane","last_name":"Blogs","previous_country":"UK",
 "gender":"Female"}]
 ```
-To test this lets do another POST request and check our databse:
+To test this lets do another POST request and check our database:
 ```
 curl -i -X POST -H "Content-Type: application/json" -d'[{"salutation":"Mr",
 "first_name":"Joe","last_name":"Blogs","previous_country":"UK",
