@@ -1,14 +1,17 @@
-Capital-Oneder
+Capital-Oneder [![Build Status](https://travis-ci.org/bpourian/CAPONE-API.svg?branch=master)](https://travis-ci.org/bpourian/CAPONE-API)
 =============
+
 Introduction
 ----
-I chose to build this app in Ruby and Sinatra Framework. I used PostgreSQL for storage along with a Ruby gem called `pg` to interact with the database within my code.
+I decided to build this app in Ruby and Sinatra Framework. I used PostgreSQL for storage along with a Ruby gem called `pg` to interact with the database within my code.
 
-I also used gem called `SimpleCov`, this is a code coverage analysis tool for Ruby. This helped me to ensure high test coverage
+I also used a gem called `SimpleCov`, this is a code coverage analysis tool for Ruby. It helped me to ensure high test coverage whilst test driving my development.
 
-The tech-test specifications hadn't indicated which stack to use for this build. I completed this task in the stack that had most recent exposure to. I did this so I could complete the task and demonstrate my understanding of the full-stack.
+The tech-test specifications hadn't indicated which programming language to use for this build. I completed the challenge in a language that I had most recent exposure to. Although, I appreciate that the tech-stack at Capital One is varied, I wanted to demonstrate my technical abilities discover more about API's.
 
 The website can be accessed through local-host and you have the option to either interact with it using the UI or API GET and PUT requests via `curl` or `POSTMAN`. Further documentation below.
+
+I have also setup Travis CI, to view that the build was successful simply click on the build logo at the top.
 
 I have also hosted the application on `HEROKU`, however I ran out of time whilst attempting to set-up the database, so you can only view the first page.
 
