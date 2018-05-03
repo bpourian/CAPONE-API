@@ -25,7 +25,9 @@ task :create_table_citizens do
 end
 
 task :create_table_citizens_test do
-  con = PG.connect :dbname => 'capital_oneder_test'
+  con = PG.connect(dbname: 'capital_oneder_test')
+  con.exec("TRUNCATE Citizens;")
+  
   con.exec "DROP TABLE IF EXISTS Citizens"
   con.exec "CREATE TABLE Citizens(id SERIAL PRIMARY KEY,
       salutation VARCHAR(60), first_name VARCHAR(60), last_name VARCHAR(60),
