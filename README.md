@@ -10,7 +10,7 @@ The tech-test specifications hadn't indicated which stack to use for this build.
 
 The website can be accessed through local-host and you have the option to either interact with it using the UI or API GET and PUT requests via `curl` or `POSTMAN`. Further documentation below.
 
-I have also hosted the application on `HEROKU`, however I ran out of time whilst attempting to set-up the database.
+I have also hosted the application on `HEROKU`, however I ran out of time whilst attempting to set-up the database, so you can only view the first page.
 
 [capital-oneder.herokuapp.com](https://capital-oneder.herokuapp.com/)
 
@@ -121,6 +121,40 @@ GET request:
 curl -i -H "Accept: application/json" -H "Content-Type: application/json"
 -X GET http://localhost:9292/api/v1/citizens
 ```
+User Stories
+---------
+```
+----------MVP V1----------
+
+As a User
+So that I can register as a citizen of Capital-Onder
+I would like visit a website
+
+As a User
+So that I can give my information over on the website
+I would like to complete a form
+```
+```
+----------MVP V2----------
+As a User
+So that I can be sure that I am registered
+I would like to receive a citizenship id number
+```
+```
+----------MVP V3----------
+As a User
+So that I can view the applicants at a later time
+I would like to be able to store them
+```
+
+```
+----------MVP V4----------
+As a User
+So that I can register multiple applicants
+I would like to be able to register them with ease
+```
+
+
 Test Specifications
 ------
 In the establishment of the New World Order, CapitalOne has laid down plans for creating a
