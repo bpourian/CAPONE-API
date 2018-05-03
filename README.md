@@ -13,9 +13,19 @@ The website can be accessed through local-host and you have the option to either
 
 I have also setup Travis CI, to view that the build was successful simply click on the build logo at the top.
 
-I have also hosted the application on `HEROKU`, however I ran out of time whilst attempting to set-up the database, so you can only view the first page.
+Heroku
+----
+
+I have hosted the application on `Heroku`, why not try it out by visiting:
 
 [capital-oneder.herokuapp.com](https://capital-oneder.herokuapp.com/)
+
+If you want to see the results in a `json` format visit the api link below:
+
+
+[http://localhost:9292/api/v1/citizens](http://localhost:9292/api/v1/citizens)
+
+
 
 See more on my approach <a href='#process'>below</a>.
 
@@ -115,6 +125,13 @@ curl -i -X POST -H "Content-Type: application/json" -d'[{"salutation":"Mr",
 "gender":"Female"}]' http://localhost:9292/api/v1/citizens
 
 ```
+
+Don't forget you can interact with the live version by simply swapping the url with:
+
+```
+http://localhost:9292/api/v1/citizens
+```
+
 If you want access to the whole database in the form of json you can do that too
 by either visiting the following link 'http://localhost:9292/api/v1/citizens' or
 using the following `curl` command in terminal:
@@ -176,8 +193,6 @@ Improvements
 Given more time I would like to have completed the following;
 
 • Ensured my API was tested with the aid of a gem called [VCR](https://github.com/vcr/vcr) to record my API calls
-
-• Debug the Heroku deployment
 
 • Use of Flash in Sinatra to display database errors when inserting a duplicate name or other invalid data type
 
