@@ -7,7 +7,7 @@ I decided to build this app in Ruby and Sinatra Framework. I used PostgreSQL for
 
 I also used a gem called `SimpleCov`, this is a code coverage analysis tool for Ruby. It helped me to ensure high test coverage whilst test driving my development.
 
-The tech-test specifications hadn't indicated which programming language to use for this build. I completed the challenge in a language that I had most recent exposure to. Although, I appreciate that the tech-stack at Capital One is varied, I wanted to demonstrate my technical abilities discover more about API's.
+The tech-test specifications hadn't indicated which programming language to use for this build. I completed the challenge in a language that I had most recent exposure to. Although, I appreciate that the tech-stack at Capital One is varied, I wanted to demonstrate my technical abilities and discover more about API's.
 
 The website can be accessed through local-host and you have the option to either interact with it using the UI or API GET and PUT requests via `curl` or `POSTMAN`. Further documentation below.
 
