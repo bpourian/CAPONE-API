@@ -10,8 +10,12 @@ class Database
   def self.connect
     if ENV['ENVIRONMENT'] == 'test'
       @connection = PG.connect :dbname => "capital_oneder_test"
-    else
-      @connection = PG.connect :dbname => "capital_oneder_dev"
+
+      elsif ENV['DATABASE_URL']
+        @connection = PG.connect :dbname => "postgresql-reticulated-68763"
+
+      else ENV['ENVIRONMENT'] == 'development'
+        @connection = PG.connect :dbname => "capital_oneder_dev"
     end
   end
 end
