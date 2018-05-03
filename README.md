@@ -189,8 +189,11 @@ nation, Capital Oneder, for anyone to be a part of. To become a citizen, people 
 the following info:
 
 • Salutation (Mr, Mrs, Miss or Ms)
+
 • Name
+
 • Previous country
+
 • Sex
 
 When a person becomes a citizen, they are provided with a Capital Onederer unique
