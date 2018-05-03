@@ -11,6 +11,7 @@ The tech-test specifications hadn't indicated which stack to use for this build.
 The website can be accessed through local-host and you have the option to either interact with it using the UI or API GET and PUT requests via `curl` or `POSTMAN`. Further documentation below.
 
 I have also hosted the application on `HEROKU`, however I ran out of time whilst attempting to set-up the database.
+
 [capital-oneder.herokuapp.com](https://capital-oneder.herokuapp.com/)
 
 See more on my approach <a href='#process'>below</a>.
@@ -135,7 +136,6 @@ When a person becomes a citizen, they are provided with a Capital Onederer uniqu
 identification tag.
 
 ## Requirements
-----
 The president of Capital Onederer, Rich Faircountry, expects 100MM people apply for
 citizenship on the first day. We need an API to register the customers as they come in, without
 missing anyone out, hopefully. Every citizen should also receive the initial details needed to
