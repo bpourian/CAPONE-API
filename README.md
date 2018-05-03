@@ -129,7 +129,7 @@ curl -i -X POST -H "Content-Type: application/json" -d'[{"salutation":"Mr",
 Don't forget you can interact with the live version by simply swapping the url with:
 
 ```
-http://localhost:9292/api/v1/citizens
+https://capital-oneder.herokuapp.com/api/v1/citizens
 ```
 
 If you want access to the whole database in the form of json you can do that too
