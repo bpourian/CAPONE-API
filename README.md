@@ -182,7 +182,7 @@ So, I set about writing user stories, diagramming and jotting down ideas. I fina
 
 • I test drove my production and ensured that I kept an eye on the code analysis to ensure high test coverage.
 
-• I setup my environment and ensured I was making regular git/github commits with clear notes
+• I setup my environment and ensured I was making regular git/github commits with clear messages
 
 • I setup a rake file to help with database setup and cleaning after each test
 
