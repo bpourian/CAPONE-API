@@ -1,4 +1,4 @@
-ENV['RACK_ENV'] ||= 'capital_oneder_dev'
+ENV['RACK_ENV'] ||= 'development'
 require 'sinatra'
 require 'sinatra/base'
 require "sinatra/namespace"

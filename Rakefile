@@ -1,3 +1,5 @@
+ENV['RACK_ENV'] ||= 'development'
+
 require 'pg'
 require './app/models/database.rb'
 
@@ -51,6 +53,7 @@ task :heroku_setup do
   con.exec "CREATE TABLE Citizens(id SERIAL PRIMARY KEY,
       salutation VARCHAR(60), first_name VARCHAR(60), last_name VARCHAR(60),
        previous_country VARCHAR(60), gender VARCHAR(60), citizen_id VARCHAR(60));"
+  con.close if con
 end
 
 task :setup do
@@ -58,8 +61,8 @@ task :setup do
 
   ['capital_oneder_test', 'capital_oneder_dev'].each do |database|
     con = PG.connect
-    con.exec "DROP DATABASE IF EXISTS #{ database }"
-    con.exec("CREATE DATABASE #{ database };")
+    con.exec "DROP DATABASE IF EXISTS #{database};"
+    con.exec("CREATE DATABASE #{database};")
     con.close if con
   end
 
