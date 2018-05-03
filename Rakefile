@@ -47,8 +47,8 @@ end
 
 task :heroku_setup do
   con = Database.connect
-  con.exec("DROP DATABASE IF EXISTS capital_oneder_live;")
-  con.exec("CREATE DATABASE capital_oneder_live;")
+  con.exec("DROP DATABASE IF EXISTS #{ENV['DATABASE_URL']};")
+  con.exec("CREATE DATABASE #{ENV['DATABASE_URL']};")
   con.exec "DROP TABLE IF EXISTS Citizens"
   con.exec "CREATE TABLE Citizens(id SERIAL PRIMARY KEY,
       salutation VARCHAR(60), first_name VARCHAR(60), last_name VARCHAR(60),
