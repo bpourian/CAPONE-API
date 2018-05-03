@@ -161,21 +161,22 @@ Initially when I read the specs for this task there was an element of confusion 
 So, I set about writing user stories, diagramming and jotting down ideas. I finally decided that I was going to build a webapp with its own API so that if requirements did change and there was a need for a more specific application I would have an `API` to interact with. This was the first time I had attempted to build something like this and I really welcomed the challenge. In my attempt to complete this challenge, I read several blogs and looked at a number of repositories as well as previous applications I had made.
 
 • I test drove my production and ensured that I kept an eye on the code analysis to ensure high test coverage.
+
 • I setup my environment and ensured I was making regular git/github commits with clear notes
+
 • I setup a rake file to help with database setup and cleaning after each test
+
 • PostgreSQL is what I used for local storage along with an app called PSequel to manually validate the input data on top of existing tests
-•
 
 Improvements
 ----
 Given more time I would like to have completed the following;
 
 • Ensured my API was tested with the aid of a gem called [VCR](https://github.com/vcr/vcr) to record my API calls
+
 • Debug the Heroku deployment
+
 • Use of Flash in Sinatra to display database errors when inserting a duplicate name or other invalid data type
-
-Above are some of the improvements I would like to have made given more time.
-
 
 
 Test Specifications
