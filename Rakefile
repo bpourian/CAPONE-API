@@ -1,5 +1,5 @@
 require 'pg'
-require '../app/models/database.rb'
+require './app/models/database.rb'
 
 task :test_database_setup do
   con = PG.connect(dbname: 'capital_oneder_test')
