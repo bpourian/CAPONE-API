@@ -9,4 +9,4 @@ before_install:
 
 before_script:
   - psql -c 'create database capital_oneder_test;' -U postgres
-  - bundle exec rake travis_setup
+  
