@@ -2,7 +2,9 @@ Capital-Oneder
 -----------
 Introduction
 ----
-I chose to build this app in Ruby and Sinatra Framework. I also used PostgreSQL for storage and used a Ruby gem called `pg` to interact with it within my code.
+I chose to build this app in Ruby and Sinatra Framework. I used PostgreSQL for storage along with a Ruby gem called `pg` to interact with the database within my code.
+
+I also used gem called `SimpleCov`, this is a code coverage analysis tool for Ruby. This helped me to ensure high test coverage
 
 The tech-test specifications hadn't indicated which stack to use for this build. I completed this task in the stack that had most recent exposure to. I did this so I could complete the task and demonstrate my understanding of the full-stack.
 
@@ -42,7 +44,6 @@ You should see all tests pass-green
 To use the app:
 ```
 $ rackup
-
 ```
 Once your localhost is up and running, visit:
 
@@ -57,11 +58,13 @@ The website has the following pages which you can interact with;
 
 Homepage or application page for citizen registration which leads to a
 confirmation page, where you will be given your `citizen id`:
+
 [http://localhost:9292](http://localhost:9292)
 
-API link - If you visit this in your browser you can view all the registered citizens(this new country
+API link - If you visit this link in your browser you can view all the registered citizens(this new country
   believes in freedom of information!).
-http://localhost:9292/api/v1/citizens](http://localhost:9292/api/v1/citizens)
+
+[http://localhost:9292/api/v1/citizens](http://localhost:9292/api/v1/citizens)
 
 
 GET/POST requests via curl or Postman
